@@ -15,6 +15,6 @@
     - name: launch nginx container
       docker:
         image="nginx:1.7.1"
-        name="example-nginx"
+        name="coreos-nginx"
         ports="8080:80"
         state=started
