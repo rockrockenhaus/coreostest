@@ -10,10 +10,10 @@
       pip: name=docker-py version=1.2.3
 
     - name: pull container
-      raw: docker pull tutum/haproxy:latest
+      raw: docker pull dockerfile/haproxy 
 
     - name: launch nginx container
       docker:
-        image="tutum/haproxy"
-        name="tutum-haproxy"
+        image="dockerfile/haproxy"
+        name="dockerhaproxy"
         ports="80:80"
