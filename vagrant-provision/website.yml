@@ -1,4 +1,4 @@
-- name: example nginx website
+- name: nginx website
   hosts: web
   tasks:
     - name: Start etcd
