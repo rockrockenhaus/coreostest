@@ -17,3 +17,7 @@
 
 # install ansible
 /usr/bin/sudo pip install ansible
+
+#Install Fleectl
+/usr/local/bin/brew install Fleetctl
+

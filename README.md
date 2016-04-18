@@ -8,29 +8,28 @@ Install brew:
 Install VirtualBox:
 brew cask install virtualbox
 
-Install Vagrant
+Install Vagrant:
 brew cask install vagrant
 
 You will need to instaall the Ansible control machine with pip (requires python, of course)
 
-Install pip
+Install pip:
 /usr/bin/sudo easy_install pip
 
 Install Ansible required python dependencies:
 /usr/bin/sudo pip install paramiko PyYAML Jinja2 httplib2 six
 
-Install Ansible using pip
+Install Ansible using pip:
 /usr/bin/sudo pip install ansible
+
+Install Fleetctl:
+brew install Fleectctl
 
 You can also run the dev_provision.sh to do all of this for you.
 
 Let's provision our instances, using ansible to provision mult machine:
 
 cd $HOME/vagrant-provision
-
 vagrant up
-
-Create an ansible hosts file (etc/ansible/hosts)
-
 
 
