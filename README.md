@@ -24,6 +24,9 @@ Install Ansible required python dependencies:
 Install Ansible using pip:
 /usr/bin/sudo pip install ansible
 
+Create roles symlink
+sudo ln -s $HOME/coreostest/etc/ansible /etc/ansible
+
 Install Fleetctl:
 brew install Fleectctl
 
@@ -31,7 +34,7 @@ You can also run the dev_provision.sh to do all of this for you.
 
 Now, you need to bring the three CoreOS instances up using the config/Vangrantfile in this directory:
 
-cd $HOME/vagrant-provision
+cd $HOME/ansible-coreos-bootstrap
 vagrant up
 
 Please wait until all instances are up.

@@ -18,6 +18,9 @@
 # install ansible
 /usr/bin/sudo pip install ansible
 
+# Create roles directory
+/usr/bin/sudo ln -s ~Documents/coreostest/etc/ansible /etc/ansible
+
 #Install Fleectl
 /usr/local/bin/brew install Fleetctl
 
