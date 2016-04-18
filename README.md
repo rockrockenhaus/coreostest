@@ -1,3 +1,5 @@
+(Please note - due to bad weather in Texas, some data was lost, but should al be recreated.)
+
 First, on the developer machine, install Vagrant and VirtualBox:
 
 (assume we're on a Mac)
