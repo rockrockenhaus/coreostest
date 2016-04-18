@@ -3,16 +3,16 @@
 ---
 coreos:
   etcd2:
-    discovery: https://discovery.etcd.io/6c397436764f64538c9e863e18a448df
-    addr: "$private_ipv4:4001"
-    peer-addr: "$private_ipv4:7001"
+    discovery: https://discovery.etcd.io/d7bd912e4a865661056fb867ffae0206
+    addr: "$private_ipv4:2379"
+    peer-addr: "$private_ipv4:2380"
     initial-advertise-peer-urls: http://$private_ipv4:2380
-    listen-peer-urls: http://$private_ipv4:2380,http://$private_ipv4:7001
+    listen-peer-urls: http://$private_ipv4:2380
     initial-cluster-token: core-01_etcd
     initial-cluster: core-01=http://$private_ipv4:2380
     initial-cluster-state: new
-    advertise-client-urls: http://$public_ipv4:2379,http://$public_ipv4:4001
-    listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
+    advertise-client-urls: http://$public_ipv4:2379
+    listen-client-urls: http://0.0.0.0:2379
   fleet:
     public-ip: "$public_ipv4"
   units:

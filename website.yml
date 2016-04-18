@@ -2,7 +2,7 @@
   hosts: web
   tasks:
     - name: Start etcd
-      service: name=etcd.service state=started
+      service: name=etcd2.service state=started
       sudo: yes
       sudo_user: root
 
