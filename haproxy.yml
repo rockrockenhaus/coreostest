@@ -10,10 +10,10 @@
       pip: name=docker-py version=1.2.3
 
     - name: pull container
-      raw: docker pull dockerfile/haproxy 
+      raw: docker pull haproxy 
 
     - name: launch nginx container
       docker:
-        image="dockerfile/haproxy"
-        name="dockerhaproxy"
+        image="haproxy"
+        name="haproxy"
         ports="80:80"
