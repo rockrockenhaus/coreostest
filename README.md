@@ -32,12 +32,7 @@ cd $HOME/vagrant-provision
 
 vagrant up
 
-
-
 Create an ansible hosts file (etc/ansible/hosts)
 
-Install pypy by running "ansible-galaxy install defunctzombie.coreos-bootstrap"
-
-You must run the playbooks in this order:
 
 
