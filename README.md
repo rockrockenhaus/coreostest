@@ -53,3 +53,6 @@ ansible-playbook -i inventory/vagrant website.yml
 
 Install HAProxy:
 ansible-playbook -i inventory/vagrant haproxy.yml
+
+Of course, the fastest way is:
+ansible-playbook -i inventory/vagrant site.yml

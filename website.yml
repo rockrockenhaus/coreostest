@@ -17,5 +17,5 @@
         image="nginx:1.7.1"
         name="coreos-nginx"
         ports="8080:80"
-        volumes="./nginx-html:/usr/share/nginx/html" 
+        volumes="/home/core/nginx-html:/usr/share/nginx/html" 
         state=started
