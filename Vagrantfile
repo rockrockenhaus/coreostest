@@ -92,7 +92,8 @@ Vagrant.configure("2") do |config|
       config.vm.network :private_network, ip: ip
 
       # Uncomment below to enable NFS for sharing the host machine into the coreos-vagrant VM.
-      config.vm.synced_folder "./nginx-files", "/home/core/nginx-html"
+      config.vm.synced_folder "./httpd-files", "/usr/local/apache2/htdocs"
+      config.vm.synced_folder "./haproxy-files/haproxy.cfg", "/haproxy.cfg"
       #config.vm.synced_folder "./nginx-files", "/home/core/nginx-html", id: "core", :nfs => true, :mount_options => ['nolock,vers=3,udp']
 
       if File.exist?(CLOUD_CONFIG_PATH)
