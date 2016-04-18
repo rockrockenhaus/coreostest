@@ -1,6 +1,3 @@
-- hosts: coreos
-  gather_facts: False
-  roles:
-    - defunctzombie.coreos-bootstrap
 - include: bootstrap.yml
 - include: website.yml
+- include: haproxy.yml
