@@ -1,5 +1,6 @@
 # Configure and deploy the load balancer(s).
 - hosts: lbservers
-  remote_user: root
+  sudo: yes
+  sudo_user: root
   roles:
   - rock.haproxy
