@@ -34,6 +34,16 @@ Now, you need to bring the three CoreOS instances up using the config/Vangrantfi
 cd $HOME/vagrant-provision
 vagrant up
 
+Please wait until all instances are up.
+
+Configure python for instance bootstrap:
+./bin/generate_ssh_config
+
 Bootstrap ansible on the vagrant instances:
 ansible-playbook -i inventory/vagrant bootstrap.yml
 
+Install nginx:
+ansible-playbook -i inventory/vagrant website.yml
+
+Install HAProxy:
+ansible-playbook -i inventory/vagrant haproxy.yml
