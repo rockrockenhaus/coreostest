@@ -34,7 +34,7 @@ You can also run the dev_provision.sh to do all of this for you.
 
 Now, you need to bring the three CoreOS instances up using the config/Vangrantfile in this directory:
 
-cd $HOME/ansible-coreos-bootstrap
+cd $HOME/coreostest
 vagrant up
 
 Please wait until all instances are up.
@@ -44,6 +44,9 @@ Configure python for instance bootstrap:
 
 Bootstrap ansible on the vagrant instances:
 ansible-playbook -i inventory/vagrant bootstrap.yml
+
+Verify that ansible is working on the vagrant instances:
+ansible -i inventory/vagrant all -m setupq
 
 Install nginx:
 ansible-playbook -i inventory/vagrant website.yml
