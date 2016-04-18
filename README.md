@@ -18,11 +18,11 @@ You will need to instaall the Ansible control machine with pip (requires python,
 
 Install pip
 
-sudo easy_install pip
+/usr/bin/sudo "easy_install pip"
 
 Install Ansible required python dependencies:
 
-sudo pip install paramiko PyYAML Jinja2 httplib2 six
+sudo pip "install paramiko PyYAML Jinja2 httplib2 six"
 
 You can also run the dev_provision.sh to do all of this for you.
 
