@@ -17,3 +17,5 @@
         image="haproxy"
         name="haproxy"
         ports="80:80"
+        volumes="/home/core/nginx-html/haproxy.cfg:/haproxy.cfg"
+        state=started
