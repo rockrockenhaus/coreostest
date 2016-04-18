@@ -1,11 +1,6 @@
 - name: haproxy website
   hosts: lbservers
   tasks:
-    - name: Start etcd
-      service: name=etcd.service state=started
-      sudo: yes
-      sudo_user: root
-
     - name: Install docker-py
       pip: name=docker-py version=1.2.3
 

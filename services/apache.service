@@ -5,7 +5,6 @@ After=docker.service
 Requires=apache-discovery@%i.service
 
 [Service]
-TimeoutStartSec=0
 KillMode=none
 EnvironmentFile=/etc/environment
 ExecStartPre=-/usr/bin/docker kill apache%i
