@@ -7,7 +7,7 @@ core-03 ansible_ssh_host=172.12.8.103
 core-02
 core-03
 
-[haproxy]
+[lbserver]
 core-01
 
 [coreos]

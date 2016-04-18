@@ -1,2 +1,3 @@
 - include: bootstrap.yml
 - include: website.yml
+- include: haproxy.yml

@@ -1,0 +1,7 @@
+# Configure and deploy the load balancer(s).
+- hosts: lbservers
+  remote_user: root
+  roles:
+  - haproxy
+
+
