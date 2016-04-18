@@ -15,5 +15,5 @@
     - name: launch nginx container
       docker:
         image="tutum/haproxy"
-        name=:tutum-haproxy"
+        name="tutum-haproxy"
         ports="80:80"
