@@ -24,11 +24,13 @@ Install Ansible required python dependencies:
 Install Ansible using pip:
 /usr/bin/sudo pip install ansible
 
-Create roles symlink
-sudo ln -s $HOME/coreostest/etc/ansible /etc/ansible
-
 Install Fleetctl:
 brew install Fleectctl
+
+Install panamax for pretty web ui:
+brew install http://download.panamax.io/installer/brew/panamax.rb && panamax init
+
+
 
 You can also run the dev_provision.sh to do all of this for you.
 

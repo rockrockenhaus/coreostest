@@ -1,21 +1,17 @@
 - name: nginx website
   hosts: web
   tasks:
-    - name: Start etcd
-      service: name=etcd2.service state=started
-      sudo: yes
-      sudo_user: root
 
     - name: Install docker-py
-      pip: name=docker-py version=1.2.3
+      pip: name=docker-py 
 
     - name: pull container
-      raw: docker pull nginx:1.7.1
+      raw: docker pull httpd 
 
     - name: launch nginx container
       docker:
-        image="nginx:1.7.1"
-        name="coreos-nginx"
+        image="httpd"
+        name="httpd-apache"
         ports="8080:80"
-        volumes="/home/core/nginx-html:/usr/local/nginx/html" 
+        volumes="/home/core/httpd-files:/usr/local/apache/htdocs" 
         state=started

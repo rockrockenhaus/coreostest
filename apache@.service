@@ -11,7 +11,7 @@ EnvironmentFile=/etc/environment
 ExecStartPre=-/usr/bin/docker kill apache%i
 ExecStartPre=-/usr/bin/docker rm apache%i
 ExecStartPre=/usr/bin/docker pull httpd
-ExecStart=/usr/bin/docker run --name apache%i -p ${COREOS_PUBLIC_IPV4}:%i:80 httpd /usr/sbin/apache2ctl -D FOREGROUND
+ExecStart=/usr/bin/docker run --name apache%i -v /home/core/httpd-files:/usr/local/apache/htdocs -p ${COREOS_PUBLIC_IPV4}:%i:80 httpd /usr/sbin/apache2ctl -D FOREGROUND
 ExecStop=/usr/bin/docker stop apache%i
 
 [X-Fleet]
