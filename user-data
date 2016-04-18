@@ -26,6 +26,6 @@ coreos:
       - name: 50-network-config.conf
         content: |
           [Service]
-          ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{ "Network": "10.0.0.0/24" }'
+          ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{ "Network": "10.0.2.0/24" }'
       # command: start
       # Uncomment the line above if you want to use flannel in your installation.
