@@ -3,3 +3,10 @@
   gather_facts: False
   roles:
     - rock.coreos-bootstrap
+  tasks:
+    - name: Start etcd2
+      service: name=etcd2.service state=started
+      sudo: yes
+      sudo_user: root
+
+
