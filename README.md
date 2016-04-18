@@ -27,7 +27,7 @@ brew install Fleectctl
 
 You can also run the dev_provision.sh to do all of this for you.
 
-Let's provision our instances, using ansible to provision mult machine:
+Now, you need to bring the three CoreOS instances up using the config/Vangrantfile in this directory:
 
 cd $HOME/vagrant-provision
 vagrant up
