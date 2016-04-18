@@ -1,8 +1,14 @@
+[web]
+core-02
+core-03
+
+[haproxy]
+core-01
 # [coreos} should be all CoreOS instances
 [coreos]
-public.coreos.test
-web01.coreos.test
-web02.coreos.test
+core-01
+core-02
+core-03
 
 [coreos:vars]
 ansible_ssh_user=core
