@@ -24,4 +24,4 @@
 #Install Panamax for pretty Fleetctl ui
 /usr/local/bin/brew install http://download.panamax.io/installer/brew/panamax.rb && panamax init
 
-
+# Set proper endpoint vi a variable: http://FLEETCTL_ENDPOINT=http://172.12.8.101:2379 && export FLEETCTL_ENDPOINT

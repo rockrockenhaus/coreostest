@@ -25,12 +25,14 @@ Install Ansible using pip:
 /usr/bin/sudo pip install ansible
 
 Install Fleetctl:
-brew install Fleectctl
+brew install Fleetctl
 
 Install panamax for pretty web ui:
 brew install http://download.panamax.io/installer/brew/panamax.rb && panamax init
 
-
+Export a fleet endpoint so we don't have to keep on typing the endpoint over and over
+FLEETCTL_ENDPOINT=http://172.12.8.101:2379
+export FLEETCTL_ENDPOINT
 
 You can also run the dev_provision.sh to do all of this for you.
 
