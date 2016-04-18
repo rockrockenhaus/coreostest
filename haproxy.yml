@@ -2,6 +2,4 @@
 - hosts: lbservers
   remote_user: root
   roles:
-  - haproxy
-
-
+  - rock.haproxy
