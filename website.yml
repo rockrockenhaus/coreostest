@@ -1,10 +1,7 @@
-- name: nginx website
+- name: httpd 
   hosts: web
+  become: yes
   tasks:
-
-    - name: Install docker-py
-      pip: name=docker-py 
-
-    - name: pull container
-      raw: docker pull httpd 
+  - name: check or build image
+    docker_image: path="/home/core/apache" name="rock/httpd" state=present
 

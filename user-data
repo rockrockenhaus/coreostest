@@ -3,7 +3,7 @@
 ---
 coreos:
   etcd2:
-    discovery: https://discovery.etcd.io/e05b709f946b34e97b63576f96758669
+    discovery: https://discovery.etcd.io/97a8457d8190ecd0d3d76baed69378f7
     addr: "$private_ipv4:2379"
     peer-addr: "$private_ipv4:2380"
     initial-advertise-peer-urls: http://$private_ipv4:2380
@@ -12,6 +12,7 @@ coreos:
     listen-client-urls: http://0.0.0.0:2379
   fleet:
     public-ip: "$public_ipv4"
+    metadata: coreos_cluster,public_ip=$public_ipv4
   units:
   - name: etcd2.service
     command: start
