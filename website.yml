@@ -7,6 +7,6 @@
      docker_image: > 
        name="rock-httpd"
        tag="apache"
-       path="/home/core/apache"
+       path="/home/core/working/apache"
        state=present
 

@@ -1,9 +1,12 @@
 - name: haproxy website
   hosts: lbservers
   tasks:
-    - name: Install docker-py
-      pip: name=docker-py version=1.2.3
-
-    - name: pull container
-      raw: docker pull haproxy 
-
+  tasks:
+   - name: Install docker-py
+     pip: name=docker-py version=1.8.0
+   - name: check or build image
+     docker_image: >
+       name="rock-haproxy"
+       tag="haproxy"
+       path="/home/core/working/haproxy"
+       state=present
