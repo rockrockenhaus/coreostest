@@ -30,6 +30,3 @@
   copy: src=runner dest=~/bin/pip mode=0755
   when: need_pip | failed
 
-- name: Install docker
-  shell: "{{ansible_python_interpreter}} pip  docker-py"
-  when: need_pip | failed
