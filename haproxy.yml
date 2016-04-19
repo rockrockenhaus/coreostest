@@ -1,7 +1,6 @@
 - name: haproxy website
   hosts: lbservers
   tasks:
-  tasks:
    - name: Install docker-py
      pip: name=docker-py version=1.8.0
    - name: check or build image
