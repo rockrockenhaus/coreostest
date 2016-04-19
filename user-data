@@ -3,8 +3,8 @@
 ---
 coreos:
   etcd2:
-    discovery: https://discovery.etcd.io/2f30c79cadcd2efc36d797977ca1a0f5
-    addr: "$private_ipv4:2379"
+    discovery: https://discovery.etcd.io/9091c25da3c581afa82fd983fe12d77d
+    addr: "$publice_ipv4:2379"
     peer-addr: "$private_ipv4:2380"
     initial-advertise-peer-urls: http://$private_ipv4:2380
     listen-peer-urls: http://$private_ipv4:2380
@@ -13,8 +13,16 @@ coreos:
   fleet:
     public-ip: "$public_ipv4"
     metadata: coreos_cluster,public_ip=$public_ipv4
+  flannel:
+    interface: $public_ipv4
   units:
   - name: etcd2.service
     command: start
   - name: fleet.service
     command: start
+   - name: flanneld.service
+     drop-ins:
+     - name: 50-network-config.conf
+       content: |
+         [Service]
+         ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{ "Network": "10.1.0.0/16" }'
