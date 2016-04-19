@@ -1,0 +1,6 @@
+- name: run the site in a apache docker container
+      docker:
+        name: coreostest 
+        image: "rock/httpd"
+        state: reloaded
+        publish_all_ports: yes 
