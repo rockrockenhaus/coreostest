@@ -31,5 +31,5 @@
   when: need_pip | failed
 
 - name: Install docker
-  shell: "pip docker-py"
+  shell: "{{ansible_python_interpreter}} pip  docker-py"
   when: need_pip | failed
