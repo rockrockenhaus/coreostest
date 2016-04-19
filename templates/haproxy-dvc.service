@@ -1,0 +1,10 @@
+[Unit]
+Description=HAProxy Data Volume Container
+After=registrator.service
+Requires=registrator.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=-/usr/bin/docker create  -v /usr/local/etc/haproxy/  --name %p  library/haproxy:1.5
+ExecStart=/usr/bin/docker inspect %p
