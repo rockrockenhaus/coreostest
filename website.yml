@@ -8,10 +8,3 @@
     - name: pull container
       raw: docker pull httpd 
 
-    - name: launch nginx container
-      docker:
-        image="httpd"
-        name="httpd-apache"
-        ports="8080:80"
-        volumes="/home/core/httpd-files:/usr/local/apache/htdocs" 
-        state=started
