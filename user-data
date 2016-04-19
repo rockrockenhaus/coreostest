@@ -3,7 +3,7 @@
 ---
 coreos:
   etcd2:
-    discovery: https://discovery.etcd.io/03a92bc67464edde906bbc5b85435744
+    discovery: https://discovery.etcd.io/63dda1983aa1fe2b68fcd2353d173dbb
     addr: "$publice_ipv4:2379"
     peer-addr: "$private_ipv4:2380"
     initial-advertise-peer-urls: http://$private_ipv4:2380
