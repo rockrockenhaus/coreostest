@@ -2,7 +2,7 @@
   hosts: lbservers
   tasks:
    - name: Install docker-py
-     pip: name=docker-py version=1.8.0
+     pip: name=docker-py version=1.2.1
    - name: check or build image
      docker_image: >
        name="rock-haproxy"
