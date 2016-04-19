@@ -1,11 +1,13 @@
 - name: httpd 
   hosts: web
   tasks:
+   - name: upload the site directory to the docker host
+     synchronize: src=./apache dest=/home/core/apache
    - name: Install docker-py
      pip: name=docker-py version=1.8.0
    - name: check or build image
      docker_image: > 
-       name="rock-httpd"
+       name="rock/httpd"
        tag="apache"
        path="/home/core/apache"
        state=present
